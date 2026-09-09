@@ -1,136 +1,61 @@
 <h1 align="center">VISSORA</h1>
-<h3 align="center">AI — Video & Meeting Intelligence Assistant 🎙️</h3>
+<p align="center"><strong>AI — Video & Meeting Intelligence Assistant</strong> 🎙️</p>
 
-Vissora AI is an AI-powered meeting intelligence application that turns recorded meetings and videos into transcripts, summaries, insights, action items, and decisions — and lets you ask questions about the meeting through a RAG-based chatbot.
+<p align="center">
+  Turn meeting recordings into transcripts, summaries, insights, decisions, action items, and context-aware answers.
+</p>
 
-The goal is simple: instead of going through an entire meeting recording again, Vissora AI helps you quickly understand what was discussed, what was decided, and what needs to be done next.
+Overview
 
-✨ What Vissora AI Does
+Vissora AI is an AI-powered meeting intelligence application that processes recorded meetings and videos into structured, searchable information. It combines speech-to-text, LLM processing, vector search, and RAG to make meeting content easier to understand and query.
 
-Vissora AI takes a video or meeting recording and processes it through several stages:
+✨ Features
 
-Video / Meeting Recording
-          ↓
-     Audio Extraction
-          ↓
-     Speech-to-Text
-     ↙           ↘
- Whisper       Sarvam AI
- English       Hinglish
-          ↓
-       Transcript
-          ↓
-   AI Processing
-          ↓
- ┌────────┼──────────────┐
- ↓        ↓              ↓
-Summary  Insights   Action Items
-          ↓
-     Vector Embeddings
-          ↓
-       ChromaDB
-          ↓
-      RAG Chatbot
-          ↓
- Context-aware Q&A
+Audio Transcription — OpenAI Whisper for English and Sarvam AI for Hinglish.
 
-🚀 Key Features
+Meeting Summarization — Generate concise summaries using Mistral AI.
 
-🎙️ Audio Transcription
+Insight Extraction — Identify discussion points, decisions, action items, and follow-ups.
 
-Convert meeting audio into text using:
+RAG Meeting Chatbot — Ask natural-language questions grounded in the processed meeting content.
 
-OpenAI Whisper for English transcription
+Semantic Search — Retrieve relevant transcript context using vector embeddings and ChromaDB.
 
-Sarvam AI for Hinglish transcription
+🧠 Pipeline
 
-The application processes the extracted audio and generates a readable transcript that can be used for further analysis.
-
-📝 Meeting Summarization
-
-Automatically generate a concise summary of the meeting so you can understand the main discussion without watching the entire recording.
-
-The summarization pipeline uses Mistral AI to process the transcript and produce meaningful meeting summaries.
-
-💡 Insight Extraction
-
-Vissora AI extracts useful information from the meeting, including:
-
-Important discussion points
-
-Key insights
-
-Decisions
-
-Action items
-
-Tasks that need follow-up
-
-This makes the application useful beyond simple transcription.
-
-💬 RAG-Based Meeting Chatbot
-
-The built-in chatbot allows users to ask questions about the meeting in natural language.
-
-For example:
-
-"What did they decide about the project deadline?"
-
-"Who was assigned the database task?"
-
-"What were the main problems discussed?"
-
-"What are the next steps?"
-
-The chatbot uses Retrieval-Augmented Generation (RAG) to retrieve relevant information from the meeting content before generating an answer.
-
-🧠 How the RAG System Works
-
-The meeting transcript is divided into smaller chunks and converted into vector embeddings.
-
-These embeddings are stored in ChromaDB, which acts as the local vector database.
-
-When a user asks a question:
-
-User Question
+Meeting / Video
       ↓
-Create Query Embedding
+Audio Extraction
       ↓
-Search ChromaDB
+Speech-to-Text
       ↓
-Retrieve Relevant Context
+Transcript
       ↓
-Send Context + Question to Mistral
+LLM Processing
+      ├── Summary
+      ├── Insights
+      ├── Decisions
+      └── Action Items
       ↓
-Generate Answer
+Embeddings → ChromaDB
+      ↓
+RAG Chatbot
+      ↓
+Context-aware Q&A
 
-This allows the chatbot to answer questions based on the actual meeting content rather than relying only on general model knowledge.
+🖥️ Application
 
-🖥️ Application Screenshots
+Main Interface
 
-🏠 Main / Home Page
+<img src="./Output_Pics/Screenshot%202026-08-30%20000823.png" alt="Vissora AI - Main Page" width="900">
 
-<img src="Output_Pics/Screenshot 2026-08-30 000823.png" alt="Vissora AI - Main Page">
+Meeting Summary & Insights
 
+<img src="./Output_Pics/Screenshot%202026-08-30%20000859.png" alt="Vissora AI - Summary" width="900">
 
+RAG Chatbot
 
-Screenshot: Replace the image above with your latest home-page screenshot if the filename/location is different.
-
-📊 Meeting Summary & Insights
-
-<img src="Output_Pics/Screenshot 2026-08-30 000859.png" alt="Vissora AI - Summary">
-
-
-
-Screenshot: Add your summary/insights output screenshot here.
-
-💬 RAG Chatbot
-
-<img src="Output_Pics/Screenshot 2026-08-30 000930.png" alt="Vissora AI - RAG Chatbot">
-
-
-
-Screenshot: This section shows the RAG chatbot answering questions using the meeting context.
+<img src="./Output_Pics/Screenshot%202026-08-30%20000930.png" alt="Vissora AI - RAG Chatbot" width="900">
 
 🛠️ Tech Stack
 
@@ -140,7 +65,7 @@ Purpose
 
 Python
 
-Core application development
+Core application
 
 Streamlit
 
@@ -168,7 +93,7 @@ Vector database
 
 Vector Embeddings
 
-Semantic search over meeting content
+Semantic search
 
 FFmpeg
 
@@ -181,22 +106,18 @@ Video/audio downloading
 📂 Project Structure
 
 Vissora-AI/
-│
 ├── core/
 │   ├── extractor.py
 │   ├── rag_engine.py
 │   ├── summarizer.py
 │   ├── transcriber.py
 │   └── vector_store.py
-│
 ├── utils/
 │   └── audio_processor.py
-│
-├── Output Pics/
-│   ├── Main.png
-│   ├── Summary.png
-│   └── Chat.png
-│
+├── Output_Pics/
+│   ├── Screenshot 2026-08-30 000823.png
+│   ├── Screenshot 2026-08-30 000859.png
+│   └── Screenshot 2026-08-30 000930.png
 ├── app.py
 ├── main.py
 ├── requirements.txt
@@ -206,24 +127,19 @@ Vissora-AI/
 
 ⚙️ Getting Started
 
-1. Clone the Repository
+1. Clone
 
-git clone https://github.com/YOUR_USERNAME/Vissora-AI.git
-cd Vissora-AI
-
-Replace YOUR_USERNAME with your GitHub username.
+git clone https://github.com/Kreezon/Vissora-AI-sys.git
+cd Vissora-AI-sys
 
 2. Create a Virtual Environment
 
-Windows:
+Windows
 
 python -m venv venv
-
-Activate it:
-
 venv\Scripts\activate
 
-Linux/macOS:
+Linux / macOS
 
 python3 -m venv venv
 source venv/bin/activate
@@ -232,207 +148,72 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
-🔑 Environment Variables
+4. Configure Environment Variables
 
-Create a .env file in the root directory:
+Create a .env file in the project root:
 
 MISTRAL_API_KEY=your_mistral_api_key
 SARVAM_API_KEY=your_sarvam_api_key
 
-If your project uses additional API keys, add them here as required.
+Never commit .env or expose API keys publicly.
 
-⚠️ Important
+5. Install FFmpeg
 
-Never commit your .env file or expose API keys on GitHub.
+FFmpeg is required for audio/video processing and should be available on your system PATH.
 
-Your .gitignore should contain:
-
-.env
-
-🎬 FFmpeg
-
-Vissora AI uses FFmpeg for audio/video processing.
-
-Make sure FFmpeg is installed and available on your system PATH.
-
-You can verify the installation with:
+Verify the installation:
 
 ffmpeg -version
 
-If the command works, FFmpeg is correctly installed.
-
-FFmpeg binaries should not be committed directly to the GitHub repository.
-
-▶️ Running the Application
-
-Start the Streamlit application with:
+6. Run
 
 streamlit run app.py
 
-Then open the local URL shown in your terminal, usually:
+The application will normally be available at:
 
 http://localhost:8501
 
-🔄 Typical Workflow
+🔄 How It Works
 
-A typical Vissora AI session looks like this:
+Upload or provide a meeting/video.
 
-Step 1 — Upload or provide a meeting/video
+Extract audio using FFmpeg.
 
-The application accepts meeting/video content for processing.
+Transcribe the audio using Whisper or Sarvam AI.
 
-Step 2 — Extract audio
+Process the transcript with Mistral AI.
 
-The audio is extracted from the input using FFmpeg.
+Generate summaries, insights, decisions, and action items.
 
-Step 3 — Transcribe
+Chunk the transcript and create vector embeddings.
 
-The selected transcription system converts speech into text.
+Store embeddings in ChromaDB.
 
-English → Whisper
+Retrieve relevant context for RAG-based questions.
 
-Hinglish → Sarvam AI
-
-Step 4 — Generate meeting intelligence
-
-Mistral AI processes the transcript to generate:
-
-Summary
-
-Insights
-
-Decisions
-
-Action items
-
-Step 5 — Build the knowledge base
-
-The transcript is chunked and converted into embeddings.
-
-The resulting vectors are stored in ChromaDB.
-
-Step 6 — Ask questions
-
-The RAG chatbot retrieves relevant chunks from the meeting and uses them as context to generate an answer.
-
-🎯 Why I Built This
-
-Meetings often contain a lot of useful information, but finding that information later can be frustrating.
-
-A recording might be an hour long, while the information you're looking for could be a single decision or action item buried somewhere in the conversation.
-
-Vissora AI was built around the idea of making that information easier to access.
-
-Instead of:
-
-Watch the entire meeting
-        ↓
-Take notes
-        ↓
-Find decisions
-        ↓
-Find assigned tasks
-        ↓
-Remember what was discussed
-
-Vissora AI aims to provide:
-
-Meeting Recording
-       ↓
-AI Processing
-       ↓
-Structured Meeting Intelligence
-       ↓
-Ask Questions Naturally
-
-🔍 Example Questions
-
-Once the meeting has been processed, users can ask questions such as:
+💬 Example Questions
 
 What was the main topic of the meeting?
-
 What decisions were made?
-
 What action items were assigned?
-
 Who is responsible for each task?
-
 What problems were discussed?
-
 What was the agreed deadline?
-
 What are the next steps?
 
-Summarize the discussion about the project.
+🎯 Why Vissora?
 
-🧩 Architecture
+Long meetings often contain critical information buried inside hours of conversation. Vissora AI turns that information into structured meeting intelligence and makes it accessible through natural-language Q&A.
 
-                    ┌─────────────────────┐
-                    │ Video / Meeting     │
-                    │ Recording           │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Audio Extraction    │
-                    │ FFmpeg              │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Speech Recognition  │
-                    │ Whisper / Sarvam AI  │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Meeting Transcript  │
-                    └──────────┬──────────┘
-                               │
-                  ┌────────────┴────────────┐
-                  │                         │
-                  ▼                         ▼
-       ┌──────────────────┐       ┌──────────────────┐
-       │ Mistral AI       │       │ Text Chunking    │
-       │                  │       │ + Embeddings     │
-       └────────┬─────────┘       └────────┬─────────┘
-                │                          │
-                ▼                          ▼
-       ┌──────────────────┐       ┌──────────────────┐
-       │ Summary /        │       │ ChromaDB         │
-       │ Insights / Tasks │       │ Vector Store     │
-       └──────────────────┘       └────────┬─────────┘
-                                           │
-                                           ▼
-                                  ┌──────────────────┐
-                                  │ RAG Chatbot      │
-                                  │                  │
-                                  │ Context + Query  │
-                                  └──────────────────┘
-
-📌 Current Scope
-
-Vissora AI currently focuses on:
-
-Meeting transcription
-
-English/Hinglish audio processing
-
-Meeting summarization
-
-Insight extraction
-
-Action-item identification
-
-Decision tracking
-
-Semantic search
-
-RAG-based question answering
+Recording
+   ↓
+AI Processing
+   ↓
+Structured Meeting Intelligence
+   ↓
+Ask Questions Naturally
 
 🔮 Future Improvements
-
-Some features I'd like to explore in future versions:
 
 Speaker identification and diarization
 
@@ -440,7 +221,7 @@ Better multilingual support
 
 Timestamp-based answers
 
-Export summaries as PDF/DOCX
+PDF/DOCX export
 
 Meeting history and searchable archives
 
@@ -448,19 +229,21 @@ User authentication
 
 Cloud-based vector storage
 
-Improved citation of transcript sources
+Improved transcript citations
 
 Calendar and meeting-platform integrations
 
-Deployment as a scalable cloud application
+Scalable cloud deployment
 
 ⚠️ Notes
 
-Vissora AI requires API access to the services used by the application.
+API access is required for the services used by the application.
 
-Make sure your API keys are configured correctly in .env before running the application.
+Configure all required keys in .env before running.
 
-Do not upload API keys, private meeting recordings, generated databases, or other sensitive data to the repository.
+Do not upload API keys, private meeting recordings, generated databases, or other sensitive data.
+
+Do not commit local FFmpeg binaries or the venv directory.
 
 👨‍💻 Author
 
@@ -470,9 +253,6 @@ Built as an AI/ML project exploring:
 
 Speech Recognition → LLM Processing → Vector Search → RAG
 
-⭐ If You Find This Project Interesting
-
-Feel free to explore the code, experiment with the pipeline, and build on top of it.
-
-If you find the project useful, consider giving the repository a ⭐.
-"# Vissora-"
+<p align="center">
+  ⭐ If you find Vissora AI useful, consider giving the repository a star.
+</p>
