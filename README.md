@@ -1,6 +1,5 @@
-Vissora AI 🎙️🤖
-
-Video & Meeting Intelligence Assistant
+<h1 align="center">VISSORA</h1>
+<h3 align="center">AI — Video & Meeting Intelligence Assistant 🎙️</h3>
 
 Vissora AI is an AI-powered meeting intelligence application that turns recorded meetings and videos into transcripts, summaries, insights, action items, and decisions — and lets you ask questions about the meeting through a RAG-based chatbot.
 
