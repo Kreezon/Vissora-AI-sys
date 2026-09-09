@@ -1,27 +1,39 @@
-<h1 align="center">VISSORA</h1>
-<p align="center"><strong>AI — Video & Meeting Intelligence Assistant</strong> 🎙️</p>
+<h1 align="center">🚀 VISSORA AI</h1>
+<h2 align="center">Video & Meeting Intelligence Assistant 🎙️</h2>
 
 <p align="center">
-  Turn meeting recordings into transcripts, summaries, insights, decisions, action items, and context-aware answers.
+  Turn meeting recordings into <strong>transcripts, summaries, insights, decisions, action items</strong>, and context-aware answers.
 </p>
 
-Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue" alt="Python">
+  <img src="https://img.shields.io/badge/Streamlit-App-red" alt="Streamlit">
+  <img src="https://img.shields.io/badge/RAG-ChromaDB-green" alt="RAG">
+  <img src="https://img.shields.io/badge/LLM-Mistral-purple" alt="Mistral AI">
+</p>
+
+🧠 Overview
 
 Vissora AI is an AI-powered meeting intelligence application that processes recorded meetings and videos into structured, searchable information. It combines speech-to-text, LLM processing, vector search, and RAG to make meeting content easier to understand and query.
 
 ✨ Features
 
-Audio Transcription — OpenAI Whisper for English and Sarvam AI for Hinglish.
+🎙️ Audio Transcription
+Convert meeting audio to text using OpenAI Whisper for English and Sarvam AI for Hinglish.
 
-Meeting Summarization — Generate concise summaries using Mistral AI.
+📝 Meeting Summarization
+Generate concise meeting summaries using Mistral AI.
 
-Insight Extraction — Identify discussion points, decisions, action items, and follow-ups.
+💡 Insight Extraction
+Extract key discussion points, decisions, action items, and follow-ups.
 
-RAG Meeting Chatbot — Ask natural-language questions grounded in the processed meeting content.
+💬 RAG Meeting Chatbot
+Ask natural-language questions grounded in the processed meeting content.
 
-Semantic Search — Retrieve relevant transcript context using vector embeddings and ChromaDB.
+🔎 Semantic Search
+Retrieve relevant transcript context using vector embeddings and ChromaDB.
 
-🧠 Pipeline
+🔄 AI Pipeline
 
 Meeting / Video
       ↓
@@ -43,17 +55,17 @@ RAG Chatbot
       ↓
 Context-aware Q&A
 
-🖥️ Application
+🖥️ Application Preview
 
-Main Interface
+🏠 Main Interface
 
 <img src="./Output_Pics/Screenshot%202026-08-30%20000823.png" alt="Vissora AI - Main Page" width="900">
 
-Meeting Summary & Insights
+📊 Meeting Summary & Insights
 
 <img src="./Output_Pics/Screenshot%202026-08-30%20000859.png" alt="Vissora AI - Summary" width="900">
 
-RAG Chatbot
+💬 RAG Chatbot
 
 <img src="./Output_Pics/Screenshot%202026-08-30%20000930.png" alt="Vissora AI - RAG Chatbot" width="900">
 
@@ -235,7 +247,7 @@ Calendar and meeting-platform integrations
 
 Scalable cloud deployment
 
-⚠️ Notes
+⚠️ Important Notes
 
 API access is required for the services used by the application.
 
@@ -247,12 +259,10 @@ Do not commit local FFmpeg binaries or the venv directory.
 
 👨‍💻 Author
 
-YOUR NAME
+Shreyas (Kreezon)
 
 Built as an AI/ML project exploring:
 
 Speech Recognition → LLM Processing → Vector Search → RAG
 
-<p align="center">
-  ⭐ If you find Vissora AI useful, consider giving the repository a star.
-</p>
+<p align="center"><strong>⭐ If you find Vissora AI useful, consider 
